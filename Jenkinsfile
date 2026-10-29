@@ -1,5 +1,8 @@
 pipeline {
-    agent { label 'student-laptop' }
+    trigger {
+        pollSCM('* * * *')
+    }
+    agent any
     options {
         skipDefaultCheckout(true)
         disableConcurrentBuilds()
