@@ -3,9 +3,6 @@ pipeline {
         pollSCM('* * * * *')
     }
     agent any
-     tools {
-        jdk 'JDK21'
-    }
     options {
         skipDefaultCheckout(true)
         disableConcurrentBuilds()
